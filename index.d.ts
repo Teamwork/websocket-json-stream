@@ -5,12 +5,12 @@ declare class WebSocketJSONStream extends Duplex {
   private _emittedClose;
   private ws;
   constructor(ws: WebSocket);
-  _read(): void;
-  _write(object: any, encoding: string, callback: (error?: Error | null) => void): void;
-  _send(json: string, callback: (error?: Error | null) => void): void;
-  _final(callback: (error?: Error | null) => void): void;
-  _destroy(error: any, callback: (error: Error | null) => void): void;
-  _closeWebSocket(code: number, reason?: string, callback?: (error?: Error | null) => void): void;
+  private _read(): void;
+  private _write(object: any, encoding: string, callback: (error?: Error | null) => void): void;
+  private _send(json: string, callback: (error?: Error | null) => void): void;
+  private _final(callback: (error?: Error | null) => void): void;
+  private _destroy(error: any, callback: (error: Error | null) => void): void;
+  private _closeWebSocket(code: number, reason?: string, callback?: (error?: Error | null) => void): void;
 }
 
 export default WebSocketJSONStream;
